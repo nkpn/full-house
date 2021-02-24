@@ -410,6 +410,28 @@ h1 {
   background-color: #efefef;
   width: 100%;
   margin: auto;
+  /*.circle {
+    margin-left: auto;
+    margin-bottom: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    position: relative;
+    margin: 20px auto;
+    z-index: 1;
+    background-color: $black-bg-color;
+
+    &:before {
+      content: "+";
+      color: $primary-bg-color;
+      position: absolute;
+      z-index: 2;
+      font-size: 40px;
+      line-height: 1;
+      top: -10%;
+      left: 16%;
+    }
+  }*/
 }
 
 @media screen and (min-width: 320px) and (max-width: 376px) {
@@ -610,26 +632,20 @@ h1 {
 }
 
 .main-container .circle {
-  margin-left: auto;
-  margin-bottom: 40px;
   width: 40px;
   height: 40px;
   border-radius: 40px;
-  position: relative;
-  margin: 20px auto;
-  z-index: 1;
   background-color: #000000;
-}
-
-.main-container .circle:before {
-  content: "+";
-  color: #ffffff;
-  position: absolute;
-  z-index: 2;
-  font-size: 40px;
-  line-height: 1;
-  top: -10%;
-  left: 16%;
+  fill: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main-container .insta-ellipse {
