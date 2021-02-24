@@ -10,11 +10,6 @@ html {
           box-sizing: border-box;
 }
 
-.page {
-  font-style: var(--main-font-family);
-  background-color: var(--main-bg-color);
-}
-
 body {
   margin: 0;
 }
@@ -408,8 +403,9 @@ h1 {
 
 .main-container {
   background-color: #efefef;
-  width: 100%;
   margin: auto;
+  width: 100%;
+  max-width: 1184px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 376px) {
