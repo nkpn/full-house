@@ -1,0 +1,182 @@
+.main-container {
+  background-color: $main-bg-color;
+  width: 100%;
+  margin: auto;
+
+  @media screen and (min-width: 320px) and (max-width: 376px) {
+    padding: 0 20px;
+  }
+
+  .heading {
+    width: 100%;
+    align-items: center;
+  }
+
+  .card-list {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-square {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    width: 184px;
+    height: 184px;
+    background-color: $primary-bg-color;
+    border-radius: 16px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.12);
+
+    @media screen and (min-width: $tablet2) and (max-width: $tablet1) {
+      width: 176px;
+      height: 176px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      width: 176px;
+      height: 176px;
+    }
+
+    &:hover,
+    &:focus {
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12),
+        0px 12px 36px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  .card {
+    width: 376px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 32px;
+    background-color: $primary-bg-color;
+    border-radius: 16px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.12);
+
+    &:hover,
+    &:focus {
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12),
+        0px 12px 36px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  .card-ver2 {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    width: 376px;
+    padding: 92px 32px 32px 32px;
+    background-color: $primary-bg-color;
+    border-radius: 16px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.12);
+
+    &:hover,
+    &:focus {
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12),
+        0px 12px 36px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  ////ROWS and columns///
+  .row-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .row-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .row-3 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  // CONTAINER 1 //
+  .container-1 {
+  }
+
+  // CONTAINER 2 //
+  .container-2 {
+    .project-list {
+      margin-top: 16px;
+      font-family: $main-font-family;
+      font-style: normal;
+      font-weight: $font-weight-4;
+      font-size: $text-fs;
+      color: $text-color;
+    }
+
+    .project-item {
+      padding-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        transform: translateX(-200%);
+        display: block;
+        content: url("../images/mark.svg");
+        fill: currentColor;
+        height: 8px;
+        width: 12px;
+      }
+    }
+  }
+
+  // CONTAINER 3 //
+  .container-3 {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: flex-start;
+
+    .text {
+      margin-top: 16px;
+      margin-bottom: 88px;
+    }
+  }
+
+  .circle {
+    margin-left: auto;
+    margin-bottom: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    position: relative;
+    margin: 20px auto;
+    z-index: 1;
+    background-color: $black-bg-color;
+
+    &:before {
+      content: "+";
+      color: $primary-bg-color;
+      position: absolute;
+      z-index: 2;
+      font-size: 40px;
+      line-height: 1;
+      top: -10%;
+      left: 16%;
+    }
+  }
+
+  .insta-ellipse {
+    margin-bottom: 60px;
+  }
+}

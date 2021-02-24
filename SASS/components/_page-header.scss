@@ -1,0 +1,21 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $main-bg-color;
+  padding: 30px 0;
+
+  h1 {
+    margin-left: 68px;
+  }
+
+  .header-link {
+    color: $text-color;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+
+    margin-right: 68px;
+    /*margin-top: 32px;*/
+  }
+}
