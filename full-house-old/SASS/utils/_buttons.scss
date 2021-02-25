@@ -8,21 +8,6 @@
   text-align: center;
   background-color: $black-bg-color;
   color: $primary-bg-color;
-
-  width: 376px;
-
-  @media screen and (min-width: $tablet2) and (max-width: $tablet1) {
-    width: 360px;
-    padding: 26px 40px;
-  }
-
-  @media screen and (max-width: $mobile) {
-    width: 280px;
-    padding: 28px 40px;
-    font-size: 16px;
-    line-height: 28px;
-  }
-
   border-radius: 44px;
   border-style: none;
   &:hover,

@@ -1,12 +1,18 @@
 .page-header {
-  padding: 30px 68px;
-  display: flex;
+  /*display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center;*/
+  padding: 30px 0;
 
-   @media screen and (min-width: $tablet1) and (max-width: $desktop) {
-   
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+
+  /* h1 {
+    margin-left: 68px;
+  }*/
 
   .header-link {
     color: $text-color;

@@ -1,0 +1,39 @@
+h1 {
+  font-family: $main-font-family;
+  font-style: 500;
+  font-weight: $font-weight-5;
+  font-size: $logo-fs;
+  line-height: $heading-lh;
+}
+
+.text {
+  font-family: $main-font-family;
+  font-style: normal;
+  font-weight: $font-weight-4;
+  font-size: $text-fs;
+  line-height: $text-lh;
+  color: $text-color;
+}
+
+.accent-text {
+  font-family: $main-font-family;
+  font-style: normal;
+  font-weight: $font-weight-5;
+  font-size: $text-fs;
+  line-height: $text-lh;
+  color: $head-text-color;
+}
+
+.heading {
+  width: 100%;
+  align-items: center;
+  font-family: $main-font-family;
+  font-size: $heading-font-size;
+  line-height: $heading-lh;
+}
+
+.price {
+  font-size: $price-fs;
+  line-height: $price-lh;
+  color: $head-text-color;
+}
