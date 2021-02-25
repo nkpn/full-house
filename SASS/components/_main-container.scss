@@ -72,7 +72,7 @@
     }
   }
 
-  .card-ver2 {
+  .card-rectangle {
     margin-right: 8px;
     margin-bottom: 8px;
     width: 376px;
@@ -90,7 +90,12 @@
     }
   }
 
+  .empty-card {
+    width: 384px;
+  }
+
   ////ROWS and columns///
+
   .row-1 {
     display: flex;
     flex-direction: row;
@@ -104,19 +109,11 @@
   }
 
   .row-3 {
-    width: 100%;
     display: flex;
     flex-direction: row;
+    align-items: flex-end;
   }
 
-  .row-third {
-  }
-
-  // CONTAINER 1 //
-  .container-1 {
-  }
-
-  // CONTAINER 2 //
   .container-2 {
     .project-list {
       margin-top: 16px;
@@ -144,7 +141,6 @@
     }
   }
 
-  // CONTAINER 3 //
   .container-3 {
     display: flex;
     flex-direction: row;

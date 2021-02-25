@@ -506,7 +506,7 @@ summary {
           box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12), 0px 12px 36px rgba(0, 0, 0, 0.16);
 }
 
-.main-container .card-ver2 {
+.main-container .card-rectangle {
   margin-right: 8px;
   margin-bottom: 8px;
   width: 376px;
@@ -517,13 +517,17 @@ summary {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
-.main-container .card-ver2:hover, .main-container .card-ver2:focus {
+.main-container .card-rectangle:hover, .main-container .card-rectangle:focus {
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12), 0px 12px 36px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12), 0px 12px 36px rgba(0, 0, 0, 0.16);
+}
+
+.main-container .empty-card {
+  width: 384px;
 }
 
 .main-container .row-1 {
@@ -553,7 +557,6 @@ summary {
 }
 
 .main-container .row-3 {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -561,6 +564,9 @@ summary {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .main-container .container-2 .project-list {
