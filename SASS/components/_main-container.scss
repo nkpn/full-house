@@ -1,5 +1,6 @@
 .main-container {
   background-color: $main-bg-color;
+  position: relative;
   margin: auto;
   width: 100%;
   max-width: 1144px;
@@ -19,11 +20,31 @@
       "c1 c2"
       "c3 c4 "
       "c5 c6"
+      "c9 c7";
+  }
+
+  @media screen and (min-width: $tablet2) and (max-width: $tablet1) {
+    max-width: 728px;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "c1 c2"
+      "c3 c4 "
+      "c5 c6"
       "c8 c9";
   }
 
+  @media screen and (min-width: $mobile) and (max-width: $tablet2) {
+    max-width: 376px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "c1" "c2" "c3" "c4" "c5" "c6" "c8" "c9";
+  }
+
   @media screen and (max-width: $mobile) {
-    padding: 0 20px;
+    max-width: 280px;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-areas: "c1" "c2" "c3" "c4" "c5" "c6" "c8" "c9";
   }
 
   // Containers
@@ -48,8 +69,13 @@
       max-height: 176px;
     }
 
+    @media screen and (min-width: $mobile) and (max-width: $tablet2) {
+      height: 184px;
+    }
+
     @media screen and (max-width: $mobile) {
-      max-height: 136px;
+      height: 136px;
+      padding: 20px;
     }
 
     &:hover,
@@ -77,7 +103,15 @@
     }
 
     @media screen and (max-width: $mobile) {
-      min-height: 88px;
+      min-height: 104px;
+      padding: 20px;
+      max-width: 280px;
+
+      .heading {
+        align-items: flex-start;
+        max-width: 210px;
+        margin-bottom: 16px;
+      }
     }
 
     &:hover,
@@ -107,6 +141,11 @@
     .text {
       margin-top: 16px;
       margin-bottom: 88px;
+
+      @media screen and (max-width: $mobile) {
+        margin-bottom: 32px;
+        margin-top: 0;
+      }
     }
   }
 
@@ -120,6 +159,58 @@
     }
   }
 
+  .c6 {
+    @media screen and (min-width: $tablet1) and (max-width: $desktop) {
+      position: absolute;
+      right: 0;
+      top: 574px;
+      width: 376px;
+    }
+
+    @media screen and (min-width: $tablet2) and (max-width: $tablet1) {
+      position: absolute;
+      right: 0;
+      top: 548px;
+      width: 360px;
+    }
+  }
+
+  .c8 {
+    @media screen and (min-width: $tablet1) and (max-width: $desktop) {
+      position: absolute;
+      right: 0;
+      top: 768px;
+      width: 376px;
+    }
+
+    @media screen and (min-width: $tablet2) and (max-width: $tablet1) {
+      position: absolute;
+      right: 0;
+      top: 733px;
+      width: 360px;
+    }
+  }
+
+  .c9 {
+    @media screen and (min-width: $tablet1) and (max-width: $desktop) {
+      position: absolute;
+      left: 190px;
+      top: 862px;
+      width: 376px;
+    }
+
+    @media screen and (min-width: $tablet2) and (max-width: $tablet1) {
+      position: absolute;
+      left: 176px;
+      top: 838px;
+      width: 360px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      max-width: 50%;
+    }
+  }
+
   // All other things
   .heading {
     width: 100%;
@@ -127,7 +218,6 @@
   }
 
   .card-list {
-    //margin-top: 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -152,7 +242,7 @@
     }
 
     @media screen and (max-width: $mobile) {
-      margin-bottom: 32px;
+      margin-bottom: 16px;
     }
   }
 
@@ -161,11 +251,14 @@
     padding-left: 25px;
     position: relative;
 
+    @media screen and (max-width: $mobile) {
+      font-size: $text-fs-mobile;
+    }
+
     &:before {
       position: absolute;
       left: 0;
       top: 0;
-      //transform: translateX(-200%);
       display: block;
       content: url("../images/mark.svg");
       fill: currentColor;
@@ -186,7 +279,7 @@
   }
 
   .insta-ellipse {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     width: 40px;
     height: 40px;
   }

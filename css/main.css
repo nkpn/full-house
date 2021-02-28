@@ -53,6 +53,13 @@
   border-radius: 20px;
 }
 
+@media screen and (max-width: 376px) {
+  .order-button {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
 .order-button-dark {
   padding: 9px 16px;
   background-color: #000000;
@@ -61,6 +68,13 @@
   line-height: 20px;
   border: 2px solid #000000;
   border-radius: 20px;
+}
+
+@media screen and (max-width: 376px) {
+  .order-button-dark {
+    font-size: 13px;
+    line-height: 20px;
+  }
 }
 
 /*.circle-button {
@@ -92,6 +106,13 @@ h1 {
   color: #858585;
 }
 
+@media screen and (max-width: 376px) {
+  .text {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
 .accent-text {
   font-family: Stratos LC Web;
   font-style: normal;
@@ -99,6 +120,13 @@ h1 {
   font-size: 15px;
   line-height: 20px;
   color: #000000;
+}
+
+@media screen and (max-width: 376px) {
+  .accent-text {
+    font-size: 13px;
+    line-height: 16px;
+  }
 }
 
 .heading {
@@ -111,10 +139,22 @@ h1 {
   line-height: 32px;
 }
 
+@media screen and (max-width: 376px) {
+  .heading {
+    font-size: 20px;
+  }
+}
+
 .price {
   font-size: 32px;
   line-height: 40px;
   color: #000000;
+}
+
+@media screen and (max-width: 376px) {
+  .price {
+    font-size: 28px;
+  }
 }
 
 *,
@@ -425,6 +465,7 @@ summary {
 
 .main-container {
   background-color: #efefef;
+  position: relative;
   margin: auto;
   width: 100%;
   max-width: 1144px;
@@ -444,13 +485,40 @@ summary {
             justify-content: center;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+        grid-template-areas: "c1 c2" "c3 c4 " "c5 c6" "c9 c7";
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 960px) {
+  .main-container {
+    max-width: 728px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: "c1 c2" "c3 c4 " "c5 c6" "c8 c9";
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 760px) {
+  .main-container {
+    max-width: 376px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "c1" "c2" "c3" "c4" "c5" "c6" "c8" "c9";
   }
 }
 
 @media screen and (max-width: 376px) {
   .main-container {
-    padding: 0 20px;
+    max-width: 280px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "c1" "c2" "c3" "c4" "c5" "c6" "c8" "c9";
   }
 }
 
@@ -485,9 +553,16 @@ summary {
   }
 }
 
+@media screen and (min-width: 376px) and (max-width: 760px) {
+  .main-container .container_1 {
+    height: 184px;
+  }
+}
+
 @media screen and (max-width: 376px) {
   .main-container .container_1 {
-    max-height: 136px;
+    height: 136px;
+    padding: 20px;
   }
 }
 
@@ -528,7 +603,16 @@ summary {
 
 @media screen and (max-width: 376px) {
   .main-container .container_2 {
-    min-height: 88px;
+    min-height: 104px;
+    padding: 20px;
+    max-width: 280px;
+  }
+  .main-container .container_2 .heading {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    max-width: 210px;
+    margin-bottom: 16px;
   }
 }
 
@@ -569,6 +653,13 @@ summary {
   margin-bottom: 88px;
 }
 
+@media screen and (max-width: 376px) {
+  .main-container .c3 .text {
+    margin-bottom: 32px;
+    margin-top: 0;
+  }
+}
+
 .main-container .c4 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -578,6 +669,66 @@ summary {
 @media screen and (max-width: 1280px) {
   .main-container .empty-card {
     display: none;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1280px) {
+  .main-container .c6 {
+    position: absolute;
+    right: 0;
+    top: 574px;
+    width: 376px;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 960px) {
+  .main-container .c6 {
+    position: absolute;
+    right: 0;
+    top: 548px;
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1280px) {
+  .main-container .c8 {
+    position: absolute;
+    right: 0;
+    top: 768px;
+    width: 376px;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 960px) {
+  .main-container .c8 {
+    position: absolute;
+    right: 0;
+    top: 733px;
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1280px) {
+  .main-container .c9 {
+    position: absolute;
+    left: 190px;
+    top: 862px;
+    width: 376px;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 960px) {
+  .main-container .c9 {
+    position: absolute;
+    left: 176px;
+    top: 838px;
+    width: 360px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .main-container .c9 {
+    max-width: 50%;
   }
 }
 
@@ -627,7 +778,7 @@ summary {
 
 @media screen and (max-width: 376px) {
   .main-container .project-list {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
 }
 
@@ -635,6 +786,12 @@ summary {
   padding-bottom: 12px;
   padding-left: 25px;
   position: relative;
+}
+
+@media screen and (max-width: 376px) {
+  .main-container .project-item {
+    font-size: 13px;
+  }
 }
 
 .main-container .project-item:before {
@@ -666,13 +823,17 @@ summary {
 }
 
 .main-container .insta-ellipse {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   width: 40px;
   height: 40px;
 }
 
 .page-header {
-  padding: 30px 68px;
+  padding: 30px;
+}
+
+.page-header .main-container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -684,13 +845,45 @@ summary {
           align-items: center;
 }
 
-.page-header .header-link {
+@media screen and (min-width: 960px) and (max-width: 1280px) {
+  .page-header .main-container {
+    max-width: 1008px;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 960px) {
+  .page-header .main-container {
+    max-width: 624px;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 760px) {
+  .page-header .main-container {
+    max-width: 624px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .page-header .main-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.page-header .main-container .header-link {
   color: #858585;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   /*margin-right: 68px;
     margin-top: 32px;*/
+}
+
+@media screen and (max-width: 376px) {
+  .page-header .main-container .header-link {
+    display: none;
+  }
 }
 
 .page-footer {

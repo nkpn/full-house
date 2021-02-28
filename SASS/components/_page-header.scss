@@ -1,19 +1,38 @@
 .page-header {
-  padding: 30px 68px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 30px;
+  .main-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-   @media screen and (min-width: $tablet1) and (max-width: $desktop) {
-   
-  }
+    @media screen and (min-width: $tablet1) and (max-width: $desktop) {
+      max-width: 1008px;
+    }
 
-  .header-link {
-    color: $text-color;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    /*margin-right: 68px;
+    @media screen and (min-width: $tablet2) and (max-width: $tablet1) {
+      max-width: 624px;
+    }
+
+    @media screen and (min-width: $mobile) and (max-width: $tablet2) {
+      max-width: 624px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      justify-content: center;
+    }
+
+    .header-link {
+      color: $text-color;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      /*margin-right: 68px;
     margin-top: 32px;*/
+
+      @media screen and (max-width: $mobile) {
+        display: none;
+      }
+    }
   }
 }

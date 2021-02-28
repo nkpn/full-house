@@ -46,6 +46,11 @@
 
   border: 2px solid $black-bg-color;
   border-radius: 20px;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $text-fs-mobile;
+    line-height: 20px;
+  }
 }
 
 .order-button-dark {
@@ -58,6 +63,11 @@
 
   border: 2px solid $black-bg-color;
   border-radius: 20px;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $text-fs-mobile;
+    line-height: 20px;
+  }
 }
 
 /*.circle-button {

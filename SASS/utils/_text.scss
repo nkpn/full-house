@@ -13,6 +13,11 @@ h1 {
   font-size: $text-fs;
   line-height: $text-lh;
   color: $text-color;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $text-fs-mobile;
+    line-height: 16px;
+  }
 }
 
 .accent-text {
@@ -22,6 +27,11 @@ h1 {
   font-size: $text-fs;
   line-height: $text-lh;
   color: $head-text-color;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $text-fs-mobile;
+    line-height: 16px;
+  }
 }
 
 .heading {
@@ -30,10 +40,18 @@ h1 {
   font-family: $main-font-family;
   font-size: $heading-font-size;
   line-height: $heading-lh;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $heading-fs-mobile;
+  }
 }
 
 .price {
   font-size: $price-fs;
   line-height: $price-lh;
   color: $head-text-color;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $price-fs-mobile;
+  }
 }
