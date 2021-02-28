@@ -7,168 +7,102 @@
   grid-gap: 8px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-    "container-1 container-2 container-3"
-    "container-4 container-5 container 6"
-    "container-8 container-9";
+    "c1 c2 c3"
+    "c4 c5 c6"
+    "c7 c8 c9";
 
   @media screen and (min-width: $tablet1) and (max-width: $desktop) {
     justify-content: center;
-    //flex-wrap: wrap;
     grid-template-columns: 376px 376px;
-    grid-template-areas:
+    grid-template-rows: masonry;
+    masonry-auto-flow: next;
+    grid-auto-flow: row dense;
+
+    /*grid-template-areas:
       "container-1 container-2"
       "container-3 container-4"
       "container-5 container-6"
-      "container-8 container-9";
+      "container-8 container-9";*/
   }
 
-  /*@media screen and (min-width: 320px) and (max-width: 376px) {
+  @media screen and (max-width: $mobile) {
     padding: 0 20px;
-  }*/
-
-  .heading {
-    width: 100%;
-    align-items: center;
-  }
-
-  .card-list {
-    margin-top: 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .card-square {
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    &:not(:last-child) {
-      margin-right: 8px;
-    }
-
-    width: 184px;
-    height: 184px;
-    background-color: $primary-bg-color;
-    border-radius: 16px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.12);
-
-    @media screen and (min-width: $tablet2) and (max-width: $tablet1) {
-      width: 176px;
-      height: 176px;
-    }
-
-    @media screen and (max-width: $mobile) {
-      width: 176px;
-      height: 176px;
-    }
-
-    &:hover,
-    &:focus {
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12),
-        0px 12px 36px rgba(0, 0, 0, 0.16);
-    }
-  }
-
-  .card {
-    //width: 376px;
-    padding: 32px;
-    background-color: $primary-bg-color;
-    border-radius: 16px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.12);
-
-    &:hover,
-    &:focus {
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12),
-        0px 12px 36px rgba(0, 0, 0, 0.16);
-    }
-  }
-
-  .card-rectangle {
-    //width: 376px;
-    padding: 32px 32px 32px 32px;
-    background-color: $primary-bg-color;
-    border-radius: 16px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.12);
-
-    &:hover,
-    &:focus {
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12),
-        0px 12px 36px rgba(0, 0, 0, 0.16);
-    }
-  }
-
-  .empty-card {
-    //width: 384px;
-
-    @media screen and (max-width: $desktop) {
-      display: none;
-    }
-  }
-
-  // ROWS
-
-  .row-1 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-  }
-
-  .row-2 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-  }
-
-  .row-3 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
   }
 
   // Containers
 
-  .container-1 {
+  .container_1 {
+    padding: 32px;
+    background-color: $primary-bg-color;
+    border-radius: 16px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 184px;
+    min-height: 184px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    @media screen and (min-width: $tablet2) and (max-width: $tablet1) {
+      min-height: 176px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      min-height: 136px;
+    }
+
+    &:hover,
+    &:focus {
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12),
+        0px 12px 36px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  .container_2 {
+    padding: 32px;
+    background-color: $primary-bg-color;
+    border-radius: 16px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    min-height: 184px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (min-width: $tablet2) and (max-width: $tablet1) {
+      min-height: 176px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      min-height: 88px;
+    }
+
+    &:hover,
+    &:focus {
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12),
+        0px 12px 36px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  .c1 {
+    display: flex;
     justify-content: flex-end;
+    flex-direction: column;
   }
 
-  .container-2 {
-    .project-list {
-      margin-top: 16px;
-      font-family: $main-font-family;
-      font-style: normal;
-      font-weight: $font-weight-4;
-      font-size: $text-fs;
-      color: $text-color;
-    }
-
-    .project-item {
-      padding-bottom: 12px;
-      padding-left: 25px;
-      position: relative;
-
-      &:before {
-        position: absolute;
-        transform: translateX(-200%);
-        display: block;
-        content: url("../images/mark.svg");
-        fill: currentColor;
-        height: 8px;
-        width: 12px;
-      }
-    }
+  .c2 {
+    display: block;
   }
 
-  .container-3 {
+  .c3 {
     @media screen and (min-width: $desktop) {
       margin-top: 66px;
     }
@@ -179,13 +113,67 @@
     }
   }
 
-  .container-4 {
+  .c4 {
     display: flex;
   }
 
-  .container-7 {
+  .empty-card {
     @media screen and (max-width: $desktop) {
       display: none;
+    }
+  }
+
+  // All other things
+  .heading {
+    width: 100%;
+    align-items: center;
+  }
+
+  .card-list {
+    //margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .TextToBottom {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .project-list {
+    margin-top: 16px;
+    margin-bottom: 76px;
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: $font-weight-4;
+    font-size: $text-fs;
+    color: $text-color;
+
+    @media screen and (min-width: $tablet2) and (max-width: $tablet1) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .project-item {
+    padding-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      //transform: translateX(-200%);
+      display: block;
+      content: url("../images/mark.svg");
+      fill: currentColor;
+      height: 8px;
+      width: 12px;
     }
   }
 
@@ -202,10 +190,7 @@
 
   .insta-ellipse {
     margin-bottom: 60px;
-  }
-
-  .text-container {
-    // Для задавания высоты .card-rectangle
-    margin-top: 60px;
+    width: 40px;
+    height: 40px;
   }
 }

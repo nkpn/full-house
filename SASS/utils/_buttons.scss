@@ -1,6 +1,5 @@
 .main-button {
   padding: 28px 40px;
-  display: block; //??
   margin-bottom: 8px;
 
   font-size: $main-button-fs;
@@ -9,10 +8,12 @@
   background-color: $black-bg-color;
   color: $primary-bg-color;
 
+  max-height: 88px;
   width: 376px;
 
   @media screen and (min-width: $tablet2) and (max-width: $tablet1) {
     width: 360px;
+    max-height: 84px;
     padding: 26px 40px;
   }
 
