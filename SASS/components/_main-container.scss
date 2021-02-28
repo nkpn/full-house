@@ -12,17 +12,14 @@
     "c7 c8 c9";
 
   @media screen and (min-width: $tablet1) and (max-width: $desktop) {
+    max-width: 760px;
     justify-content: center;
-    grid-template-columns: 376px 376px;
-    grid-template-rows: masonry;
-    masonry-auto-flow: next;
-    grid-auto-flow: row dense;
-
-    /*grid-template-areas:
-      "container-1 container-2"
-      "container-3 container-4"
-      "container-5 container-6"
-      "container-8 container-9";*/
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "c1 c2"
+      "c3 c4 "
+      "c5 c6"
+      "c8 c9";
   }
 
   @media screen and (max-width: $mobile) {
@@ -38,7 +35,7 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.12);
     width: 100%;
     max-width: 184px;
-    min-height: 184px;
+    max-height: 184px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,11 +45,11 @@
     }
 
     @media screen and (min-width: $tablet2) and (max-width: $tablet1) {
-      min-height: 176px;
+      max-height: 176px;
     }
 
     @media screen and (max-width: $mobile) {
-      min-height: 136px;
+      max-height: 136px;
     }
 
     &:hover,
@@ -104,7 +101,7 @@
 
   .c3 {
     @media screen and (min-width: $desktop) {
-      margin-top: 66px;
+      margin-top: 97px;
     }
 
     .text {
