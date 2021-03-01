@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Stratos LC Web';
-    src: local('Stratos LC Web Regular'), local('Stratos-LC-Web-Regular'),
-        url('StratosLCWeb-Regular.woff2') format('woff2'),
-        url('StratosLCWeb-Regular.woff') format('woff'),
-        url('StratosLCWeb-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
